@@ -26,3 +26,25 @@ header {
     padding: 30px;
     font-size: 14pt
 }
+
+a {
+    color: #9702A7;
+    text-decoration: none;
+}
+
+a:link {
+    color: #9702A7;
+}
+
+a:visited {
+    color: #87CEFA;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #EF54AC;
+}
