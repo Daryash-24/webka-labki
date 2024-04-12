@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png"> 
+    <style>
+        .photo {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .container div {
+            display: none;
+        }
+
+        .photo:hover+.container div {
+            display: block;
+        }
+        .label1 {
+            width: 40px; 
+            height: 20px;
+            left: 770px;
+            border-radius: 100px/50px;
+            bottom: 440px;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .label2 {
+            width: 50px; 
+            height: 25px;
+            left: 795px;
+            border-radius: 100px/50px;
+            bottom: 480px;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .label3 {
+            width: 70px; 
+            height: 35px;
+            left: 820px;
+            border-radius: 100px/50px;
+            bottom: 535px;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .label4 {
+            width: 200px; 
+            height: 100px;
+            left: 860px;
+            border-radius: 100px/50px;
+            border: 2px solid black;
+            bottom: 660px;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+           text-align: center;
+           font-size: 14px; 
+           margin-top: 35px;
+           padding: 5px;
+           color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+
+    <main>
+        <img class="photo" src="graviti.jpeg">
+
+        <div class="container">
+            <div class="label1"></div>
+            <div class="label2"></div>
+            <div class="label3"></div>
+            <div class="label4"><p>КАК ОТДЫХАЕМ ТОЛЬКО 1 И 9 МАЯ!?</p></div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
