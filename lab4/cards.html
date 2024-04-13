@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <style>
+        .container {
+            display: inline;
+            margin-top: 25px;
+            margin-left: 100px;
+            float: left;
+            position: relative;
+            z-index: 0;
+            transition: all 0.3s;
+        }
+
+        .photo_1:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .photo_2:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .photo_3:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .photo_4:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .photo_5:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .photo_6:hover {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
+        .text {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 200px;
+            margin-right: 650px;
+            margin-top: 10px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_1:hover+.text {
+            display: block; 
+        }
+
+        .contant {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 600px;
+            margin-right: 200px;
+            margin-top: 10px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_6:hover+.contant {
+            display: block; 
+        }
+
+        .content {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 1000px;
+            margin-top: 10px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_3:hover+.content {
+            display: block; 
+        }
+
+        .content2 {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 1000px;
+            margin-top: 10px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_2:hover+.content2 {
+            display: block; 
+        }
+
+        .content5 {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 600px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_5:hover+.content5 {
+            display: block; 
+        }
+
+        .content4 {
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-left: 200px;
+            margin-right: 650px;
+            margin-bottom: 50px;
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            z-index: 3;
+            font-size: 20px; 
+            text-align: center;
+            color: black;
+        }
+
+        .photo_4:hover+.content4 {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+    
+    <main>
+        <div class="container">
+
+            <img class="photo_1" src="photo_1.jpg" width="30%" height="30%">
+            <div class="text">
+            <span class="title">Платье "Альмеро"</span>
+            <span class="info">Это изысканное длинное белое платье станет идеальным выбором 
+                для особых моментов в вашей жизни. Изготовленное из легкого и прочного материала, 
+                оно обеспечит вам комфорт и элегантный вид в любой ситуации.</span>
+            </div>
+
+            <img class="photo_6" src="photo_6.jpg" width="30%" height="30%">
+            <div class="contant">
+            <span class="title">Серьги "Диана"</span>
+            <span class="info">Эти крупные серьги сочетают в себе изысканность и изящество, создавая 
+                утонченный акцент для вашего образа. Каждая деталь тщательно проработана, 
+                чтобы подчеркнуть вашу женственность и стиль.</span>
+            </div>
+
+            <img class="photo_3" src="photo_3.jpg" width="30%" height="30%">
+            <div class="content">
+            <span class="title">Серьги "Валенсия"</span>
+            <span class="info">Это великолепное платье молочного оттенка словно выходит из сказки, 
+                сочетая в себе нежность и элегантность. Его закрытый дизайн придает образу загадочности, 
+                а великолепные детали добавляют шарма и изыска.</span>
+            </div>
+
+            <img class="photo_4" src="photo_4.jpg" width="30%" height="30%">
+            <div class="content4">
+            <span class="title">Ожерелье "Liberum"</span>
+            <span class="info">Это изящное ожерелье представляет собой две цепочки, которые переплетаются между собой, 
+                создавая уникальный и элегантный дизайн. Плавные линии переплетения придают ожерелью неповторимую грацию 
+                и шарм.</span>
+            </div>
+
+            <img class="photo_5" src="photo_5.jpg" width="30%" height="30%">
+            <div class="content5">
+                <span class="title">Платье "Лунное Волнение"</span>
+                <span class="info">Это воздушное платье, созданное из полупрозрачного белого материала, 
+                    словно призвано воплотить в себе образ легкости и нежности. Его изящный фасон и тонкий материал 
+                    создают эффект невесомости, который зачаровывает взгляды.</span>
+            </div>
+
+            <img class="photo_2" src="photo_2.jpg" width="30%" height="30%">
+            <div class="content2">
+            <span class="title">Ожерелье "Грация"</span>
+            <span class="info">Золотое ожерелье с жемчужинами на тонкой цепочке — это не только украшение, 
+                но и символ изысканности и стиля. Носите его с гордостью, ведь оно подчеркнет вашу утонченность 
+                и привлекательность, делая вас центром внимания в любой обстановке</span>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        &copy; Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
