@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function showSum(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let inputC = document.getElementById('numberC');
+            let inputD = document.getElementById('numberD');
+            let inputE = document.getElementById('numberE');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let e = parseInt(inputE.value);
+
+            let result = (a * 30) + (b * 200) + (c * 300) + (d * 50) + (e * 70);
+            output(result);
+
+        }
+        function output(result){
+            let output = document.getElementById('output');
+            output.innerHTML = 'Общая цена: ' + result + ' рублей';
+        }
+
+        function clearForm(){
+            document.getElementById('numberA').value = '';
+            document.getElementById('numberB').value = '';
+            document.getElementById('numberC').value = '';
+            document.getElementById('numberD').value = '';
+            document.getElementById('numberE').value = '';
+            document.getElementById('output').remove();
+        }
+    </script>
+    <style>
+        .tovary{
+            border: 3px solid;
+            border-radius: 5px;
+            width: 410px;
+            height: 470px;
+            font-size: 20px;
+            padding: 20px;
+            position: absolute;
+            top:  50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 1.5;
+        }
+
+        label{
+            display: block;
+            font-weight: bold;
+        }
+
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <div class="tovary" id="tovaryClear">
+            <h1>Корзина товаров</h1>
+            <label>Персики (30 руб/шт):<br></label>
+            <input type="number" id="numberA" min="1" placeholder="Сколько персиков вы хотите?">
+
+            <label>Черника (200 руб/упак):<br></label>
+            <input type="number" id="numberB" min="1" placeholder="Сколько черники вы хотите?">
+
+            <label>Клубника (300 руб/упак):<br></label>
+            <input type="number" id="numberC" min="1" placeholder="Сколько клубники вы хотите?">
+
+            <label>Йогурт (50 руб/шт):<br></label>
+            <input type="number" id="numberD" min="1" placeholder="Сколько йогуртов вы хотите?">
+
+            <label>Бананы (70 руб/шт):<br></label>
+            <input type="number" id="numberE" min="1" placeholder="Сколько бананов вы хотите?">
+
+            <div>
+                <input type="button" value="Рассчитать" onclick="showSum()" style="display: inline-block">
+                <input type="button" value="Очистить" onclick="clearForm()" style=" display: inline-block">
+            </div>
+            
+            <div id="output"></div>
+        </div>
+
+        
+
+    </main>
+
+    
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
