@@ -18,6 +18,36 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+
+        function showRasnost(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность ' + a + ' и ' + b + ' равна ' + result);
+        }
+
+        function showYmnogenie(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b
+            alert('Произведение ' + a + ' и ' + b + ' равно ' + result);
+        }
+
+        function showDelenie(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b
+            alert(+ a + ' поделить на ' + b + ' равно ' + result);
+        }
         function showAuthor() {
             let author = 'Автор страницы:\nДыбалина Дарья Александровна';
             alert(author);
@@ -63,6 +93,9 @@
         <label>Первое число: <input type="number" id="numberA"><br></label>
         <label>Второе число: <input type="number" id="numberB"><br></label>
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
+        <div class="message" onclick="showRasnost()">Найти разность чисел</div>
+        <div class="message" onclick="showYmnogenie()">Найти произведение</div>
+        <div class="message" onclick="showDelenie()">Найти деление</div>
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
