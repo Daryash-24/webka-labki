@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function filter(){
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Белый' && type == 'Футболка'){
+                wear.src = 't-wh.jpg';}
+
+            else if(color == 'Белый' && type == 'Платье'){
+                wear.src = 'pl-wh.jpg';}
+
+            else if(color == 'Белый' && type == 'Брюки'){
+                wear.src = 'br-wh.jpg';}
+
+            else if(color == 'Бежевый' && type == 'Футболка'){
+                wear.src = 't-bej.jpg';}
+
+            else if(color == 'Бежевый' && type == 'Платье'){
+                wear.src = 'pl-bej.jpg';
+            }
+            else if(color == 'Бежевый' && type == 'Брюки'){
+                wear.src = 'br-bej.jpg';}
+
+            else if(color == 'Голубой' && type == 'Футболка'){
+                wear.src = 't-gol.jpg';}
+
+            else if(color == 'Голубой' && type == 'Платье'){
+                wear.src = 'pl-gol.jpg';
+            }
+            else if(color == 'Голубой' && type == 'Брюки'){
+                wear.src = 'br-gol.jpg';}
+        }
+    </script>
+    <style>
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            background-color: lavender;
+            border: 2px solid plum;
+            border-radius: 5px;
+            padding: 14px 40px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        button:hover{
+            background-color: plum; 
+            color: white;
+            transform: scale(1.2)
+        }
+        div{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    
+    <main>
+        <div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Белый</option>
+                <option>Бежевый</option>
+                <option>Голубой</option>
+            </select>
+            Тип одежды:
+            <select id="wear-type">
+                <option >Футболка</option>
+                <option>Платье</option>
+                <option>Брюки</option>
+            </select><br>
+
+            <button onclick="filter()">Ok</button><br>
+
+            <img id="wear">
+
+        </div>
+
+    </main>
+
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
