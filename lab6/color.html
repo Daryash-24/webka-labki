@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Цвет</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function changeColor(div){
+            if(div.style.backgroundColor == 'hotpink') {
+                div.style.backgroundColor = 'violet';
+                div.style.color = 'purple'
+                document.getElementById('color-name').innerHTML = 'cиреневый'
+            }
+            else if(div.style.backgroundColor == 'violet'){
+                div.style.backgroundColor = 'mediumorchid';
+                div.style.color = 'lavender'
+                document.getElementById('color-name').innerHTML = 'фиолетовый';
+            }
+            else if(div.style.backgroundColor == 'mediumorchid'){
+                div.style.backgroundColor = 'slateblue';
+                div.style.color = 'aliceblue'
+                document.getElementById('color-name').innerHTML = 'синий'
+            }
+            else if(div.style.backgroundColor == 'slateblue'){
+                div.style.backgroundColor = 'lightskyblue';
+                div.style.color = 'darkslateblue'
+                document.getElementById('color-name').innerHTML = 'голубой'
+            }
+            else {
+                div.style.backgroundColor = 'hotpink';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+        }
+    </script>
+    <style>
+        .color {
+            border: 2px solid;
+            border-radius: 10px;
+            width: 30%;
+            height: 200px;
+            background-color: hotpink;
+            cursor: pointer;
+            transition: background-color 1.2s, color 1.2s;
+        }
+        .color p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    
+    <main>
+        <div class="color" ondblclick="changeColor(this)">
+            <p>Цвет: <span id="color-name">розовый</span><br></p>
+            <p>Сделайте двойной клик, чтобы поменять цвет</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
