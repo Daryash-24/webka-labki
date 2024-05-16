@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function addNewBlock(){
+            let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = '#df87f5';
+            newBlock.style.height = '100px';
+            newBlock.style.width = '250px';
+            newBlock.style.margin = '20px';
+            newBlock.style.borderRadius = '7px';
+
+            document.querySelector('main').appendChild(newBlock);
+
+        }
+    </script>
+    <style>
+        button{
+            margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            background-color: lavender;
+            border: 2px solid plum;
+            border-radius: 5px;
+            padding: 14px 40px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        button:hover{
+            background-color: plum; 
+            color: white;
+            transform: scale(1.2)
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+    
+    <main>
+       <button onclick="addNewBlock()">Добавить блок</button>
+    </main>
+
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
