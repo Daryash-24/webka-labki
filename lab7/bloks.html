@@ -30,7 +30,7 @@
                 newBlock.style.height = '80px';
                 newBlock.style.width = `${(i+10) * 20}px`;
                 newBlock.style.margin = '10px';
-                newBlock.style.marginLeft = '300px'
+                newBlock.style.marginLeft = '270px'
                 newBlock.style.padding = '10px';
                 newBlock.style.textAlign = 'center';
                 
@@ -51,16 +51,37 @@
                 newBlock.style.margin = '10px';
                 newBlock.style.padding = '10px';
                 newBlock.style.border = '1px solid';
-                newBlock.style.marginLeft = '820px';
+                newBlock.style.marginLeft = '750px';
 
                 newBlock.innerHTML = `${i}`;
                 main.appendChild(newBlock); 
             }
         }
+        function add10_80(){
+            let main = document.querySelector('main');
+            for(let i = 10; i>=-80; i+=-3) {
+                let newBlock = document.createElement('div');
+                newBlock.style.width = '50px';
+                newBlock.style.height = '50px';
+                newBlock.style.margin = '10px';
+                newBlock.style.padding = '10px';
+                newBlock.style.textAlign = 'center';
+                newBlock.style.backgroundColor = '#caa1ff';
+                newBlock.style.border = '1px solid';
+                newBlock.style.borderRadius = '50%';
+                newBlock.style.fontSize = '20px';
+                newBlock.style.color = 'white';
+                newBlock.style.lineHeight = '50px';
+                newBlock.style.display = 'inline-block';
+
+                newBlock.innerHTML = `${i}`;
+                main.appendChild(newBlock);
+            }
+        }
     </script>
     <style>
         button{
-            margin: 50px;
+            margin: 30px;
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 16px;
@@ -89,7 +110,7 @@
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <input  type="number" id="blocksCount" placeholder="Количество блоков">
         <button onclick="add20_50()">20 => 50</button>
-        
+        <button onclick="add10_80()">10 => -80</button>
     </main>
 
     <footer>
