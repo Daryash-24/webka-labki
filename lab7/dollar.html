@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function showExchange(){
+            const exchange = [
+                92.2914, 92.5254, 92.3892, 92.3058, 92.4155,
+                92.5810, 92.7463, 93.2198, 93.7196, 93.4419
+            ];
+            let table = document.getElementById('dollar-table');
+            for(let i = 0; i < exchange.length; i++){
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                td.innerText = exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for(let i = 0; i < exchange.length; i++){
+                sum += exchange[i];        
+            }
+            let average = sum / exchange.length;
+            average = average.toFixed(2);
+            let detailDiv = document.getElementById('detail');
+            detailDiv.innerText = `Среднее значение: ${average}`;
+            detail.style.fontSize = '20px';
+            let button = document.getElementById('show-button');
+            button.style.display = 'none';
+        }
+    </script>
+     <style>
+        button{
+            margin: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            background-color: lavender;
+            border: 2px solid plum;
+            border-radius: 5px;
+            padding: 15px 25px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        button:hover{
+            background-color: plum; 
+            color: white;
+            transform: scale(1.1)
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+    
+    <main>
+        <button id="show-button" onclick="showExchange()">Курс доллара</button>
+        <table border="1" id="dollar-table" style="font-size: 20px;"></table>
+        <div id="detail"></div>
+    </main>
+
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
