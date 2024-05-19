@@ -13,8 +13,8 @@
             let newBlock = document.createElement('div');
             newBlock.style.backgroundColor = '#df87f5';
             newBlock.style.height = '100px';
-            newBlock.style.width = '250px';
-            newBlock.style.margin = '20px';
+            newBlock.style.width = '200px';
+            newBlock.style.margin = '10px';
             newBlock.style.borderRadius = '7px';
 
             document.querySelector('main').appendChild(newBlock);
@@ -30,10 +30,9 @@
                 newBlock.style.height = '80px';
                 newBlock.style.width = `${(i+10) * 20}px`;
                 newBlock.style.margin = '10px';
-                newBlock.style.marginLeft = '270px'
+                newBlock.style.marginLeft = '170px'
                 newBlock.style.padding = '10px';
                 newBlock.style.textAlign = 'center';
-                
                 newBlock.style.borderRadius = '7px';
                 newBlock.innerText = `Блок Nº ${i + 1} : ${2 * i**2}`;
                 newBlock.innerHTML = `Блок Nº ${i + 1} : 2*${i} <sup>2</sup> = ${2 * i**2}`;
@@ -51,7 +50,7 @@
                 newBlock.style.margin = '10px';
                 newBlock.style.padding = '10px';
                 newBlock.style.border = '1px solid';
-                newBlock.style.marginLeft = '750px';
+                newBlock.style.marginLeft = '550px';
 
                 newBlock.innerHTML = `${i}`;
                 main.appendChild(newBlock); 
@@ -142,7 +141,7 @@
         button:hover{
             background-color: plum; 
             color: white;
-            transform: scale(1.2)
+            transform: scale(1.1)
         }
         
     </style>
