@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дыбалина Дарья Александровна. Лабораторная работа 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function showExchange(){
+            const prices = [
+                316.5, 318, 315.6, 315.3, 319.5, 316.9,
+                315.4, 317.7, 315.9, 314.5
+            ];
+            const dates = [ 
+                "03.05.2024", "06.05.2024", "07.05.2024", "08.05.2024", "10.05.2024", "13.05.2024", "14.05.2024",
+                "15.05.2024", "16.05.2024", "17.05.2024"
+                ];
+            let table = document.getElementById('stock-table');
+            let sum = 0;
+            let min = prices[0];
+            let max = prices[0];
+
+            for (let i = 0; i < prices.length; i++) {
+                let tr = document.createElement('tr');
+
+                let dateTd = document.createElement('td');
+                dateTd.innerText = dates[i];
+                tr.appendChild(dateTd);
+
+                let priceTd = document.createElement('td');
+                priceTd.innerText = prices[i];
+                tr.appendChild(priceTd);
+
+                let diffTd = document.createElement('td');
+
+                if (i === 0) {
+                    diffTd.innerText = "-";
+                } else {
+                    let diff = prices[i] - prices[i - 1];
+                    diffTd.innerText = diff;
+                }
+                tr.appendChild(diffTd);
+
+                table.appendChild(tr);
+
+                sum += prices[i];
+                min = Math.min(min, prices[i]);
+                max = Math.max(max, prices[i]);
+            }
+
+            let average = sum / prices.length;
+            average = average.toFixed(2);
+            let detailDiv = document.getElementById('detail');
+            detail.style.fontSize = '20px';
+            detailDiv.innerText = `Среднее значение: ${average}\nМинимальное значение: ${min}\nМаксимальное значение: ${max}`;
+        }
+    </script>
+     <style>
+        button{
+            margin: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            background-color: lavender;
+            border: 2px solid plum;
+            border-radius: 5px;
+            padding: 15px 25px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        button:hover{
+            background-color: plum; 
+            color: white;
+            transform: scale(1.1)
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+    
+    <main>
+        <button  onclick="showExchange()">Котировки акций компании "Полиметалл"</button>
+            <table border="1" id="stock-table" style="font-size: 20px;">
+                <tr>
+                    <th>Дата</th>
+                    <th>Цена акций</th>
+                    <th>Разница</th>
+                </tr>
+            </table>
+            <div id="detail"></div>
+    </main>
+
+    <footer>
+        &copy;Дыбалина Дарья, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
