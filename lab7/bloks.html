@@ -78,6 +78,27 @@
                 main.appendChild(newBlock);
             }
         }
+        function translucent(){
+            let main = document.querySelector('main');
+            let opasity = 0;
+
+            for(let i = 0; i < 10; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.style.opacity = (i + 1) * 0.1;
+                newBlock.style.backgroundColor = '#b346bd';
+                newBlock.style.width = '80px';
+                newBlock.style.height = '80px';
+                newBlock.style.margin = '10px';
+                newBlock.style.padding = '10px';
+                newBlock.style.textAlign = 'center';
+                newBlock.style.color = '#4c264f';
+                newBlock.style.lineHeight = '80px';
+                newBlock.style.display = 'inline-block';
+
+                newBlock.textContent = i + 1;
+                main.appendChild(newBlock);
+            }
+        }
     </script>
     <style>
         button{
@@ -111,6 +132,7 @@
         <input  type="number" id="blocksCount" placeholder="Количество блоков">
         <button onclick="add20_50()">20 => 50</button>
         <button onclick="add10_80()">10 => -80</button>
+        <button onclick="translucent()">Полупрозрачные блоки</button>
     </main>
 
     <footer>
