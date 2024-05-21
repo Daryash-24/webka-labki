@@ -17,7 +17,7 @@ footer {
     color: #512882; 
     font-family: Franklin Gothic Medium; 
     text-align: center; 
-    font-size: 14px;
+    font-size: 20px;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -29,6 +29,25 @@ header {
     color: #8B008B; 
     padding: 30px;
     font-size: 14pt
+}
+
+button{
+    margin: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: lavender;
+    border: 2px solid plum;
+    border-radius: 5px;
+    padding: 15px 25px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: plum; 
+    color: white;
+    transform: scale(1.1)
+        
 }
 
 a {
